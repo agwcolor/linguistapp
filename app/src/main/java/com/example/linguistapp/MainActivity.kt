@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -18,6 +17,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.linguistapp.ui.theme.LinguistAppTheme
 import androidx.compose.ui.graphics.Color
+
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.height
+import androidx.compose.ui.Alignment
+
+
 // button dependencies
 import androidx.compose.material3.Button
 import androidx.compose.runtime.remember
@@ -34,15 +39,19 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             LinguistAppTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    //color = Color.Yellow
                     color = Color(1f, 0f, 0f, 0.9f) // Semi-transparent red
-                //color = MaterialTheme.colorScheme.background
                 ) {
-                    TitleText(title = "Linguist App", subtitle = "Let's Translate")
-                    MyButton()
+                    Column(
+                        modifier = Modifier.padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+                        TitleText(title = "Linguist App", subtitle = "Let's Translate")
+                        Spacer(modifier = Modifier.height(16.dp))
+                        MyButton()
+                    }
                 }
             }
         }
