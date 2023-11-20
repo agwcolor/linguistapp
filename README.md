@@ -11,13 +11,13 @@ This project does not have any networking capability and so it cannot be current
 the Google Translate API.
 
 ### Installation instructions
-Usage instructions
-### Documentation
+Open in android Studio and run in emulator
+
+### Documentation that I used to do this project
 - https://cloud.google.com/translate/docs/reference/api-overview#rest
 - https://developer.android.com/jetpack/compose/setup#sample
 - https://developer.android.com/courses/android-basics-compose/unit-1
 
-Project roadmap
 ### Project status - In progress
 - Basic App Screen created
 - Still need networking and Retrofit code. Serialize and deserialize json.
